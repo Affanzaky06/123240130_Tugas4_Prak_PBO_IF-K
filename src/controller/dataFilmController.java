@@ -108,7 +108,7 @@ public class dataFilmController {
                 throw new Exception("Nilai Harus Antara 0-5");
             }
             else{
-                impldataFilm.insert(df);
+                impldataFilm.update(df);
             }
             
 
