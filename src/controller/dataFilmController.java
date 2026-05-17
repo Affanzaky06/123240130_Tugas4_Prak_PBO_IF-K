@@ -104,8 +104,13 @@ public class dataFilmController {
             
             df.setId(id);
             
-
-            impldataFilm.update(df);
+            if (alur < 0 || alur > 5 || penokohan < 0 || penokohan > 5 || akting < 0 || akting > 5 ) {
+                throw new Exception("Nilai Harus Antara 0-5");
+            }
+            else{
+                impldataFilm.insert(df);
+            }
+            
 
             
             javax.swing.JOptionPane.showMessageDialog(frame, "Data berhasil diubah!");
